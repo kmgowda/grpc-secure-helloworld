@@ -17,7 +17,7 @@
  */
 
 #include "helper.h"
-#include <string>
+#include <string.h>
 #include <fstream>
 
 

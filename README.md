@@ -24,14 +24,21 @@ you will find the executables secure_greeter_server and secure_greeter_client in
 1. got to folder cmake/build
 
 1. Run the executable : secure_greeter_server -ca <CA file path> -cert <Certificate path> -key <key file>
-    example:
+
+    ```
+        example:
+        
     ./secure_greeter_server -ca /Users/kmg/projects/grpc/examples/cpp/helloworld/certificates/ca.pem -cert /Users/kmg/projects/grpc/examples/cpp/helloworld/certificates/cert.pem -key /Users/kmg/projects/grpc/examples/cpp/helloworld/certificates/key.pem
+    ```
 
 2. in the other shell window : secure_greeter_client -ca <CA file path> -cert <Certificate path> -key <key file>
     1. for client, you set the server ip , using -target option too.
+    
+    ```
    example:
    ./secure_greeter_client -ca /Users/kmg/projects/grpc/examples/cpp/helloworld/certificates/ca.pem -cert /Users/kmg/projects/grpc/examples/cpp/helloworld/certificates/cert.pem -key /Users/kmg/projects/grpc/examples/cpp/helloworld/certificates/key.pem
-      
+
+    ```
 
 ## how to generate certificates ?
 

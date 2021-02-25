@@ -66,7 +66,12 @@ void RunServer(int argc, char** argv) {
   ssl_opts.pem_root_certs=certs.ca;
   ssl_opts.pem_key_cert_pairs.push_back(pkcp);
   creds = grpc::SslServerCredentials(ssl_opts);
-  grpc::EnableDefaultHealthCheckService(true);
+
+  /*
+   *  Invoking grpc::EnableDefaultHealthCheckService(true) , disable the reflections.
+   *  grpc::EnableDefaultHealthCheckService(true);
+  */
+
   grpc::reflection::InitProtoReflectionServerBuilderPlugin();
   ServerBuilder builder;
 
